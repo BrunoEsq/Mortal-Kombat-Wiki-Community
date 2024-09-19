@@ -104,7 +104,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Directories to search for static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mortalweb/static'),  # Add this if you have a 'static' folder in 'mortalweb'
+    BASE_DIR / "mortalweb/static",
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
