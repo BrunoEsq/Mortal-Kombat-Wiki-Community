@@ -4,20 +4,18 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Port for Render
 PORT = os.getenv("PORT", "8000")
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Security settings
 SECRET_KEY = 'django-insecure-p)$5taf$7ytd5@^r$)d@p1a0nspeeuomqp&r5+qeibpixlfaa*'
+DEBUD = False
+ALLOWED_HOSTS = ['mortal-kombat-wiki-community.onrender.com']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['mortal-kombat-wiki-community.onrender.com', '*']
-
+# Custom user model
 AUTH_USER_MODEL = 'accounts.MyUser'
 
 # Application definition
-
 INSTALLED_APPS = [
     'mortalweb.apps.MortalwebConfig',
     'crispy_forms',
@@ -88,11 +86,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
@@ -100,7 +95,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mortalweb/static/imagenes')
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # O la ruta que prefieras
 
 # Directories to search for static files
 STATICFILES_DIRS = [
