@@ -12,8 +12,10 @@ from django.shortcuts import redirect
 from datetime import date
 from urllib.parse import quote
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 
 def index(request):
+    print(f"MEDIA_ROOT: {settings.MEDIA_ROOT}")
     return render(request, "paginas/index.html")
 
 
