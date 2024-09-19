@@ -1,0 +1,20 @@
+.imagen_liu{
+    object-fit: cover;
+    background-size: cover;
+
+    position: relative; /* Hace que la imagen sea posicionada relativa al contenedor */
+    top: 100px; /* Posición inicial de la imagen, fuera de la pantalla */
+    transition: top 1s ease; 
+}
+
+.imagen_liu.loaded {
+    top: 0; /* Posición final de la imagen, en su lugar normal */
+}
+
+.prueba{
+    width: 70%;
+}
+
+body{
+    overflow-x: hidden;
+}

@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.hero {
+  position: absolute;
+  bottom: 0;
+  height: 550px;
+  z-index: 5;
+  max-width: 550px;
+  filter: contrast(90%);
+  pointer-events: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  z-index: 5;
+  color: transparent;
+  background-position: 0 0;
+  animation: animated-text 20s linear infinite;
+}
+
+@keyframes animated-text {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.one,
+.two,
+.five {
+  -webkit-text-stroke: 1px rgba(139, 163, 32, 0.8);
+  background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ba4edde6-822d-437a-88c2-f54392d7a56f);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+.three,
+.four,
+.six {
+  -webkit-text-stroke: 1px #fff;
+  background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e9d06cb6-2844-49ed-9bde-23d3364b9fa4);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.thumbnail {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.thumbnail .div {
+  background-color: #ffffff;
+  width: 1200px;
+  height: 100px;
+  position: relative;
+}
+
+.thumbnail .overlap-group {
+  position: absolute;
+  width: 1200px;
+  height: 131px;
+  top: 0;
+  left: 0;
+}
+
+.thumbnail .cursor-labels {
+  position: absolute;
+  width: 136px;
+  height: 62px;
+  top: 51px;
+  left: 547px;
+  background-color: #f24e1e;
+  border: 4px solid;
+  border-color: #000000;
+}
+
+.thumbnail .rectangle {
+  position: absolute;
+  width: 1400px;
+  height: 120px;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+}
+
+.thumbnail .muaythai {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 13px;
+  left: 620px;
+  object-fit: cover;
+}
+
+
+
+.thumbnail .text-wrapper {
+  position: absolute;
+  width: 91px;
+  height: 10px;
+  top: 75px;
+  left: 460px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.highlight {
+  color: rgb(240, 81, 81) !important;
+}
+.thumbnail .text-wrapper-2 {
+  position: absolute;
+  width: 107px;
+  height: 20px;
+  top: 75px;
+  left: 595px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.thumbnail .logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 8px;
+  left: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.thumbnail .text-wrapper-3 {
+  position: absolute;
+  width: 258px;
+  height: 82px;
+  top: 37px;
+  left: 145px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 20px;
+}
+
+.thumbnail .text-wrapper-4 {
+  position: absolute;
+  width: 107px;
+  height: 20px;
+  top: 75px;
+  left: 750px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  line-height: 20px;
+}
+
+.thumbnail .icono-home-cerrado {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 15px;
+  left: 479px;
+  object-fit: cover;
+}
+
+.thumbnail .icono-escenario {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 15px;
+  left: 775px;
+  object-fit: cover;
+}
+
+.footer {
+  background-image: url('/static/images/fondos/fondo-nav.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: auto; /* Asegura que el footer esté siempre al final */
+}
