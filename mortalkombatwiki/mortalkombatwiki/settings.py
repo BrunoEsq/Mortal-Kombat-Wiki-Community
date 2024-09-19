@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p)$5taf$7ytd5@^r$)d@p1a0nspeeuomqp&r5+qeibpixlfaa*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mortal-kombat-wiki-community-4.onrender.com']
+ALLOWED_HOSTS = ['mortal-kombat-wiki-community-7.onrender.com']
 
 AUTH_USER_MODEL = 'accounts.MyUser'
 
