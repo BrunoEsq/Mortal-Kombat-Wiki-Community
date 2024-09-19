@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-if DEBUG == False:
+if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'mortalweb/static')]  # Asegúrate de que esta ruta exista
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Esta es la ruta donde se recopilarán los archivos estáticos
