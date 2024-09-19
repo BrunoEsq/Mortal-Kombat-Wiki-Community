@@ -124,7 +124,7 @@ if DEBUG:
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Esta es la ruta donde se recopilarán los archivos estáticos
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Carpeta para archivos subidos
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
