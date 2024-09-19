@@ -1,19 +1,16 @@
 import os
 from pathlib import Path
 
-# Directorio base del proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Seguridad
 SECRET_KEY = 'django-insecure-p)$5taf$7ytd5@^r$)d@p1a0nspeeuomqp&r5+qeibpixlfaa*'
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['mortal-kombat-wiki-community.onrender.com', '*']
 
 # Definir el modelo de usuario personalizado
 AUTH_USER_MODEL = 'accounts.MyUser'
 
-# Aplicaciones instaladas
 INSTALLED_APPS = [
     'mortalweb.apps.MortalwebConfig',
     'crispy_forms',
@@ -24,13 +21,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',  # Agregado para usar Whitenoise en producción
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Agregado Whitenoise Middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -39,13 +37,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Solo agregar Whitenoise en producción
-if not DEBUG:  # Si DEBUG está en False (Producción)
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-
 ROOT_URLCONF = 'mortalkombatwiki.urls'
 
-# Configuración de plantillas
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -88,12 +81,8 @@ USE_TZ = True
 
 # Configuración de archivos estáticos
 STATIC_URL = '/static/'
-
-if not DEBUG:  # En producción (Render)
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Donde Whitenoise buscará los archivos estáticos
-else:  # En desarrollo local
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Donde se almacenarán los archivos estáticos en producción
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Configuración de Whitenoise
 
 # Archivos media
 MEDIA_URL = '/media/'
