@@ -1,0 +1,85 @@
+.with-background-image {
+    background-image: url('/static/images/fondos/fondo-nav.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-image: url('/static/images/fondos/Fondo1.jpg');
+    background-size: cover;
+    background-repeat: repeat !important;
+    overflow-x: hidden !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.container-fluid {
+    flex-grow: 1;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.protest-strike-regular {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.protest-riot-regular {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+li a {
+    font-size: 1.3rem !important;
+}
+
+li a:hover {
+    transition: 0.3s;
+    opacity: 0.8;
+    color: #25f0ff !important;
+}
+
+section a {
+    transition: 2s !important;
+
+}
+
+section a:hover {
+    transition: 0.7s;
+    background-color: #25f0ff !important;
+
+}
+
+.registrarse{
+    background-color: #25f0ff !important;
+}
+
+@media (max-width: 1686px) {
+    .liu-kang-container {
+        display: none;
+    }
+}
+
+@media (max-width: 774px) {
+    .mortal-kombat-wiki-img {
+        width: 75%;
+    }
+}
+

@@ -1,0 +1,25 @@
+.usuario:hover {
+  transform: rotate(1turn);
+  transform: 0.5s;
+}
+
+
+.usuario {
+  width: 35px;
+  transition: 0.5s;
+}
+/* 
+.registro:hover {
+  transform: rotate(1turn);
+  transform: 0.5s;
+}
+
+
+.registro {
+  width: 40px;
+  transition: 0.5s;
+} */
+
+.register{
+  width: 40px;
+}
