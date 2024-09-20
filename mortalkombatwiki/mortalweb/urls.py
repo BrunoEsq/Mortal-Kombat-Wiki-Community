@@ -20,4 +20,4 @@ urlpatterns = [
     path('accept_request/<int:solicitud_id>/', views.accept_request, name='accept_request'),
     path('deny_request/<int:solicitud_id>/', views.deny_request, name='deny_request'),
     path('delete_character/<int:personaje_id>/', views.delete_character, name='delete_character'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
